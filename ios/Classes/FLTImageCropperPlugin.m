@@ -153,9 +153,18 @@
     }
     if (doneButtonTitle && [doneButtonTitle isKindOfClass:[NSString class]]) {
         controller.doneButtonTitle = doneButtonTitle;
+        [controller.toolbar.doneTextButton setTitleColor:[UIColor greenColor] 
+               forState:UIControlStateNormal & 
+                        UIControlStateHighlighted & 
+                        UIControlStateSelected];
     }
     if (cancelButtonTitle && [cancelButtonTitle isKindOfClass:[NSString class]]) {
         controller.cancelButtonTitle = cancelButtonTitle;
+        controller.doneButtonTitle = doneButtonTitle;
+        [controller.toolbar.doneTextButton setTitleColor:[UIColor redColor] 
+               forState:UIControlStateNormal & 
+                        UIControlStateHighlighted & 
+                        UIControlStateSelected];
     }
 }
 
